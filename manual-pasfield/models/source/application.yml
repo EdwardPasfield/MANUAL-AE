@@ -1,0 +1,21 @@
+version: 2
+sources:
+  - name: application
+    description: Operational data for manual test
+    loader: application
+    project: manual-pasfield
+    schema: manual
+    #loaded_at_field: lastTouched
+    freshness:
+      warn_after: { count: 12, period: hour }
+      error_after: { count: 24, period: hour }
+
+    tables:
+      - name: acq_orders
+        description: acquired_orders
+
+      - name: activity
+        description: activity
+
+      - name: customers
+        description: customer table

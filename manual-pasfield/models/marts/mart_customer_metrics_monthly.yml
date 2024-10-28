@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: mart_customer_metrics_monthly
+    description: "The retention analysis of each cohort"
+
+    columns:
+      - name: month
+        description: "The month in which each customer cohort was acquired."
+        data_type: date
+        data_tests:
+          - not_null
+      - name: customer_country
+        description: "Country of the customers"
+        data_type: string
+      - name: taxonomy_business_category_group
+        description: "Taxonomy of the customers"
+        data_type: string
+      - name: acquired_customers
+        description: "The number of customers acquired in each cohort month."
+        data_type: int64
+      - name: retained_customers
+        description: "The number of customers who remain active each month."
+        data_type: int64
+      - name: churned_customers
+        description: "The number of customers who churned in each cohort month."
+        data_type: int64
+      - name: retention_rate
+        description: "The percentage of customers retained, calculated as `(retained_customers / acquired_customers) * 100`."
+        data_type: float
+      - name: churn_rate
+        description: "The percentage of customers who churned, calculated as `(churned_customers / acquired_customers) * 100`."
+        data_type: float64

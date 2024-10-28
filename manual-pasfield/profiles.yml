@@ -1,0 +1,12 @@
+manual-test-platform:
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: service-account 
+      project: manual-pasfield  # Your GCP project ID
+      schema: manual_test
+      #dataset: your_dataset_name  # Replace with your dataset name
+      threads: 1
+      keyfile: /Users/Edward/Documents/MANUAL-AE/sa.json  # Path to your service account key file
+      location: EU

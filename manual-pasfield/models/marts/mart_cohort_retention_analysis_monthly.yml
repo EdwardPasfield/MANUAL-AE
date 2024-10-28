@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: mart_cohort_retention_analysis_monthly
+    description: "The retention analysis of each cohort"
+
+    columns:
+      - name: cohort_month
+        description: "The acquisition month of each customer cohort."
+        data_type: date
+        data_tests:
+          - not_null
+      - name: customer_country
+        description: "Country of the customers"
+        data_type: string
+      - name: taxonomy_business_category_group
+        description: "Taxonomy of the customers"
+        data_type: string
+      - name: total_customers
+        description: "The total number of customers in each cohort."
+        data_type: int64
+      - name: retained_1_month
+        description: "The number of customers retained after 1 month."
+        data_type: int64
+      - name: retention_rate_1_month
+        description: "The 1-month retention rate, calculated as `(retained_1_month / total_customers) * 100`."
+        data_type: float64
+      - name: retained_3_months
+        description: "The number of customers retained after 3 months."
+        data_type: int64
+      - name: retention_rate_3_months
+        description: "The 3-month retention rate, calculated as `(retained_3_month / total_customers) * 100`."
+        data_type: float64
+      - name: retained_6_months
+        description: "The number of customers retained after 3 months."
+        data_type: int64
+      - name: retention_rate_6_months
+        description: "The 6-month retention rate, calculated as `(retained_6_month / total_customers) * 100`."
+        data_type: float64
