@@ -8,5 +8,6 @@ manual-test-platform:
       schema: manual_test
       #dataset: your_dataset_name  # Replace with your dataset name
       threads: 1
-      keyfile: /Users/Edward/Documents/MANUAL-AE/sa.json  # Path to your service account key file
+      # ADD A SERVICE ACCOUNT HERE THAT HAS BQ PERMISSIONS IN YOUR GCP PROJECT
+      keyfile: /Users/...sa.json  # Path to your service account key file
       location: EU

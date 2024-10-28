@@ -27,4 +27,6 @@ The data model and approach enables flexible cohort analysis by focusing on acqu
 
 In terms of a technical test this also showcases my understanding of multilayered wearhouse, in which each layer has a different purpose. It also showcases my understanding and ability to use DBT competently with Seeds, Macros, Docs and Tests.
 
+MORE MODEL SPECIFIC DOCUMENTATION IN THE overview.md!
+
 Thanks you for your time :) 
